@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>InstafeedJS</title>
+	<script src="instafeed.min.js"></script>
+</head>
+<body>
+
+<style>
+#instafeed{
+	margin: 0 auto;
+}
+.caption{
+	color:blue;
+}
+img{
+	height: auto;
+}
+</style>
+
+<!-- http://instafeedjs.com/ -->
+
+	<h1>InstafeedJS</h1>
+	
+	<div id="instafeed">
+	<script>
+    var userFeed = new Instafeed({
+        get: 'user',
+        userId: '2271382168',
+        accessToken: '2271382168.1677ed0.179af336f9f443d6b921015852a8b614',
+
+        //Get the below code from 'Standard Options' in Instafeed.js
+        resolution: 'standard_resolution',
+        limit : '50',
+        template: '<img src="{{image}}"><br><p class="caption">{{caption}}</p>'
+    });
+    userFeed.run();
+    
+</script>
+</div>
+</body>
+</html>
